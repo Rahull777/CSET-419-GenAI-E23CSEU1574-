@@ -1,6 +1,6 @@
 # Week 1 (14-01-2026)
 
-- Folder: [Week 1](Week 1/)
+- Folder: [Week 1](Week%201/)
 
 ## Summary
 
