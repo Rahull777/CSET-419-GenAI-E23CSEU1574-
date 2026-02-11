@@ -149,3 +149,57 @@ In this experiment, we explore the capabilities of VAEs in learning **continuous
 
 ##  Conclusion
 This experiment validates the effectiveness of Variational Autoencoders in learning structured data representations. The reconstruction results demonstrate the model's ability to capture essential features, while the generative samples prove it can synthesize novel data points. Furthermore, the latent space visualization confirms that the VAE successfully clusters semantically similar items, proving its utility for unsupervised learning and creative generation tasks.
+
+
+
+
+
+
+
+
+
+
+# Lab – 4: Text Generation Models
+
+**Course:** CSET419: Introduction to Generative AI  
+**Experiment:** Implement Sequence-Based (LSTM) and Transformer-Based Models for Text Generation
+
+##  Objective
+[cite_start]The objective of this lab is to design and implement a simple text generation model that can learn patterns from a given text corpus and generate new, meaningful text sequences[cite: 49]. [cite_start]Students will gain hands-on experience in preprocessing textual data and implementing both Recurrent Neural Networks (RNNs) and Transformer architectures[cite: 53, 54].
+
+##  Experiment Overview
+[cite_start]Text generation is a Natural Language Processing (NLP) task where a model learns patterns from text data and generates new text that resembles the training data[cite: 58]. In this experiment, we implement two distinct approaches:
+1.  [cite_start]**Component–I:** RNN / LSTM based text generation to handle sequential data and dependencies[cite: 65, 88].
+2.  [cite_start]**Component–II:** Transformer-based text generation utilizing self-attention mechanisms for parallel processing[cite: 119, 92].
+
+##  Domain & Models
+* [cite_start]**Domain:** Natural Language Processing (NLP)[cite: 86].
+* **Models Used:**
+    * [cite_start]**LSTM (Long Short-Term Memory):** Addresses long-term dependency problems found in standard RNNs[cite: 89].
+    * [cite_start]**Transformer:** Uses self-attention and positional encoding to focus on relevant context and improve training efficiency[cite: 92, 93, 123].
+
+##  Methodology
+1.  [cite_start]**Dataset Preparation:** Utilized a text corpus regarding Artificial Intelligence, Machine Learning, and Ethics [cite: 73-116].
+2.  **Data Preprocessing:**
+    * [cite_start]Performed tokenization (character-level or word-level) to convert text into numerical format[cite: 68, 122].
+    * [cite_start]Created input-output sequences using N-gram techniques[cite: 60, 69].
+3.  **Architecture Design:**
+    * [cite_start]**LSTM:** Designed a sequence-based architecture to learn temporal patterns[cite: 70].
+    * [cite_start]**Transformer:** Implemented Encoder blocks with positional encoding to handle word order and context[cite: 123, 124].
+4.  **Training & Generation:**
+    * [cite_start]Trained both models on the prepared sequences[cite: 71, 125].
+    * [cite_start]Generated new text using seed inputs to test model coherence[cite: 72, 126].
+
+##  Tools & Technologies
+* [cite_start]**Language:** Python [cite: 13]
+* [cite_start]**Libraries:** TensorFlow / Keras [cite: 13]
+* **Techniques:** Tokenization, Padding, Embedding, Self-Attention
+
+##  Key Outputs
+1.  [cite_start]**Processed Data:** Tokenized and padded text sequences ready for training[cite: 67].
+2.  **Generated Text Samples:**
+    * [cite_start]**LSTM Output:** Text sequences generated based on learned sequential probabilities[cite: 118].
+    * [cite_start]**Transformer Output:** Text sequences generated utilizing attention mechanisms[cite: 128].
+
+##  Conclusion
+This experiment demonstrates the capabilities of different neural architectures in **Natural Language Processing**. [cite_start]While LSTM models effectively handle sequential data, Transformer models provide superior efficiency through parallelization and self-attention[cite: 89, 94]. [cite_start]Mastering these techniques is essential for modern AI applications such as chatbots, automated content creation, and language translation[cite: 108].
