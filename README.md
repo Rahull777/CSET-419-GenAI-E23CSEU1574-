@@ -320,3 +320,53 @@ This experiment demonstrates the limitations of using simple **Reconstruction Lo
 
 ## Conclusion
 [cite_start]This experiment successfully demonstrates the implementation of a conditional GAN (cGAN) for paired image-to-image translation.[cite: 426, 433] [cite_start]By utilizing an Encoder–decoder CNN with skip connections (U-Net), the model preserves low-level spatial features and reduces information loss caused by pooling.[cite: 435, 436, 437] Furthermore, [cite_start]the PatchGAN Discriminator effectively classifies local image patches as real or fake, which directly encourages sharpness and texture realism.[cite: 439, 440] [cite_start]Comparing the Pix2Pix GAN with the baseline CNN Encoder–Decoder[cite: 461] proves that the addition of adversarial training yields significantly more realistic and detailed outputs.
+
+
+
+# Lab – 7: Neural Style Transfer (NST)
+
+[cite_start]**Course:** CSET419: Introduction to Generative AI [cite: 462]  
+**Experiment:** Implement Neural Style Transfer using a Pretrained CNN
+
+##  Objective
+[cite_start]The objective of this lab is to implement Neural Style Transfer (NST) using a pretrained CNN and generate a stylized image[cite: 464, 465]. [cite_start]This is achieved by combining the content of one image with the style of another image[cite: 466, 467].
+
+##  Experiment Overview
+
+In this experiment, we explore how convolutional neural networks represent visual information. Instead of training a network from scratch, we use a pretrained model (VGG19) as a feature extractor. By defining specific mathematical loss functions, we iteratively optimize a target image so that its high-level structure matches a "content" image, while its colors and textures match a "style" image.
+
+##  Domain & Model
+* [cite_start]**Dataset:** * You may use any file for content and style[cite: 468]. 
+    * (Example: CIFAR-10 as content file and WikiArt dataset file for style) [cite_start][cite: 469].
+    * [cite_start]Choose one file for content and one file for style[cite: 470].
+* **Generative Model:** **Pretrained VGG19**
+    * [cite_start]Loaded with frozen weights to act as a fixed feature extractor[cite: 475].
+    * [cite_start]Content layers and Style layers are extracted from specific convolutional blocks[cite: 476, 477, 478].
+
+##  Methodology
+1. [cite_start]**Data Preparation:** [cite: 472]
+    * [cite_start]Load 1 content image and 1 style image[cite: 473, 474].
+    * [cite_start]Load pretrained VGG19 and freeze its weights[cite: 475].
+    * [cite_start]Extract specific Content layers and Style layers[cite: 477, 478].
+2. [cite_start]**Define Loss Functions:** [cite: 479]
+    * [cite_start]**Content loss:** Measures how much the target image's structure deviates from the content image[cite: 480].
+    * [cite_start]**Style loss:** Measures how much the target image's texture/colors deviate from the style image using Gram matrices[cite: 481].
+    * [cite_start]**Total loss:** A weighted combination of Content and Style losses[cite: 482].
+3. **Optimization:**
+    * [cite_start]Implement feature-based style transfer[cite: 483].
+    * [cite_start]Implement loss-based image optimization by updating the target image's pixels via backpropagation while keeping network weights frozen[cite: 484].
+
+##  Tools & Technologies
+* **Language:** Python
+* **Framework:** PyTorch / Torchvision
+* **Model:** VGG19 (Pretrained on ImageNet)
+
+##  Expected Output
+[cite_start]Upon successful execution, the final visualization will display the Content image, Style image, and Generated image side-by-side[cite: 485]. 
+[cite_start]Students should observe: [cite: 486]
+* [cite_start]Content structure preserved[cite: 487].
+* [cite_start]Style texture transferred[cite: 488].
+* [cite_start]Artistic appearance similar to style image[cite: 489].
+
+##  Conclusion
+This experiment successfully demonstrates the principles of feature extraction and loss-based optimization in deep learning. By leveraging a pretrained VGG19 model and calculating distinct content and style losses, we can effectively perform feature-based style transfer. The results highlight how deep neural networks separate structural information from textural information, allowing us to computationally blend the content of a photograph with the artistic style of a painting.
