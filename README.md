@@ -438,3 +438,103 @@ Students should observe:
 In this experiment, a GAN model was implemented to generate artistic images. The generator learned to create new images from latent vectors, while the discriminator helped improve the quality of generated outputs. The experiment demonstrates how generative models can create creative visual content.
 
 
+
+# 🧪 Lab – 9: Sequence Generation using RNN/LSTM and Transformer
+
+**Course:** CSET419: Introduction to Generative AI  
+**Experiment:** Sequence Generation using Neural Networks (RNN/LSTM and Transformer)
+
+---
+
+## 🎯 Objective
+The objective of this lab is to design and implement generative models for sequential data such as text. Students will learn how models predict the next element in a sequence and generate new sequences using learned patterns.
+
+---
+
+## 📌 Experiment Overview
+
+[Image of RNN/LSTM and Transformer Architecture]
+
+In this experiment, we explore **Sequence Generation**, where a model learns patterns in text data and predicts the next word based on previous words. We implement two approaches:
+
+- A traditional **LSTM-based model** that processes sequences step-by-step  
+- A modern **Transformer-based model** that uses attention mechanisms  
+
+The goal is to compare how both models generate sequences and understand their strengths and limitations.
+
+---
+
+## 🧠 Domain & Model
+
+* **Dataset Selected:** Custom Text Dataset  
+    * Contains sentences related to machine learning and sequence modeling  
+    * Converted into word-level sequences for training  
+
+* **Generative Models:**
+    * **LSTM (Long Short-Term Memory)**
+        * Captures sequential dependencies using hidden states  
+    * **Transformer**
+        * Uses attention mechanism to process entire sequence at once  
+
+* **Task:**
+    * Predict the next word given previous words  
+    * Generate new sequences from a seed input  
+
+---
+
+## ⚙️ Methodology
+
+1. **Dataset Preparation:**
+    * Loaded and cleaned the text dataset  
+    * Converted text into lowercase words  
+    * Created vocabulary mapping (word → index)  
+
+2. **Sequence Creation:**
+    * Generated input-output pairs  
+    * Example:  
+        * Input: "machine learning models learn"  
+        * Output: "patterns"  
+
+3. **Model Design:**
+    * Implemented **LSTM model** for sequential learning  
+    * Implemented **Transformer model** for parallel processing  
+
+4. **Training:**
+    * Trained models using **Cross-Entropy Loss**  
+    * Optimized using Adam optimizer  
+
+5. **Sequence Generation:**
+    * Provided a seed sentence  
+    * Model predicts next words iteratively  
+
+---
+
+## 🛠️ Tools & Technologies
+
+* **Language:** Python  
+* **Framework:** PyTorch  
+* **Libraries:** NumPy  
+
+---
+
+## 📊 Key Outputs
+
+* **Training Metrics:** Loss decreasing over epochs  
+* **Generated Sequences:**  
+    * Input (Seed): "machine learning models learn"  
+    * Output: "machine learning models learn patterns from data sequence models..."  
+
+* **Observation:**
+    * LSTM generates coherent but sometimes limited sequences  
+    * Transformer generates more context-aware and flexible sequences  
+
+---
+
+## 📎 Conclusion
+
+This experiment demonstrates how generative models can learn from sequential data and generate meaningful text. LSTM models capture sequential dependencies effectively, but Transformers outperform them by using attention mechanisms to understand global context.
+
+This highlights the importance of Transformer-based architectures in modern applications like text generation, language modeling, and AI systems such as chatbots.
+
+---
+
